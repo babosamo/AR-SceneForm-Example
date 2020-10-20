@@ -1,6 +1,7 @@
 plugins {
     id 'com.android.application'
     id 'kotlin-android'
+    id 'com.google.ar.sceneform.plugin'
 }
 
 android {
@@ -53,3 +54,8 @@ dependencies {
     androidTestImplementation 'androidx.test.ext:junit:1.1.2'
     androidTestImplementation 'androidx.test.espresso:espresso-core:3.3.0'
 }
+
+sceneform.asset('sampledata/Dictionary_01.obj',
+        'default',
+        'sampledata/Dictionary_01.sfa',
+        'src/main/assets/dic')
