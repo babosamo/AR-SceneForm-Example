@@ -44,6 +44,8 @@ class MainActivity : AppCompatActivity() {
 
         val anchorNode: AnchorNode = AnchorNode(anchor)
         val transform: TransformableNode = TransformableNode(arFragment.transformationSystem)
+        transform.scaleController.maxScale = 0.2f
+        transform.scaleController.minScale = 0.1f
         transform.setParent(anchorNode)
         transform.renderable = it
         arFragment.arSceneView.scene.addChild(anchorNode)
